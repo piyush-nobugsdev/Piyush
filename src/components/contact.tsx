@@ -3,7 +3,7 @@ export default function Contact() {
   <section
   id="contact"
   className="py-20 px-6 md:px-20 
-  bg-lightBg dark:bg-darkBg 
+ 
   transition-colors duration-300"
 >
   <h2
@@ -19,7 +19,7 @@ export default function Contact() {
       type="text"
       placeholder="Your Name"
       className="w-full p-4 rounded-xl 
-      bg-lightCard dark:bg-darkCard 
+      bg-transparent
       text-lightText dark:text-darkText
       border border-lightCard dark:border-darkCard
       focus:outline-none focus:ring-2 focus:ring-primary
@@ -30,7 +30,7 @@ export default function Contact() {
       type="email"
       placeholder="Your Email"
       className="w-full p-4 rounded-xl 
-      bg-lightCard dark:bg-darkCard 
+      bg-transparent
       text-lightText dark:text-darkText
       border border-lightCard dark:border-darkCard
       focus:outline-none focus:ring-2 focus:ring-primary
@@ -41,7 +41,7 @@ export default function Contact() {
       rows={5}
       placeholder="Your Message"
       className="w-full p-4 rounded-xl 
-      bg-lightCard dark:bg-darkCard 
+      bg-transparent backdrop-blur-sm
       text-lightText dark:text-darkText
       border border-lightCard dark:border-darkCard
       focus:outline-none focus:ring-2 focus:ring-primary

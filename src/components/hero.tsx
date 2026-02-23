@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 bg-lightBg dark:bg-darkBg transition-colors duration-300">
+    <section className="min-h-screen flex items-center justify-center pt-20  transition-colors duration-300"> 
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         
         <div>

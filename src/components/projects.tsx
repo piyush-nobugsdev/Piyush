@@ -20,7 +20,7 @@ export default function Projects() {
     <section
   id="projects"
   className="py-20 px-6 md:px-20 
-  bg-lightBg dark:bg-darkBg 
+  
   transition-colors duration-300"
 >
   <h2
@@ -34,7 +34,7 @@ export default function Projects() {
     {projects.map((project) => (
       <div
         key={project.name}
-        className="bg-lightCard dark:bg-darkCard 
+        className=" 
         rounded-2xl shadow-md overflow-hidden 
         hover:scale-105 transition 
         duration-300"

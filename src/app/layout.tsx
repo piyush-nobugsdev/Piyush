@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,10 +23,73 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+
   return (
     <html lang="en">
-      <body className="bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText transition-colors duration-300">
-      {children}
+     <body className="
+  relative overflow-x-hidden
+  bg-gradient-to-br 
+  from-lightBg 
+  to-[#F3F4F6] 
+  dark:from-darkBg 
+  dark:to-[#0F172A]
+  text-lightText dark:text-darkText
+">
+       
+        {/* 🌈 Background Gradient Layer */}
+<div className="pointer-events-none fixed inset-0 -z-20 
+bg-[radial-gradient(circle_at_25%_25%,rgba(40,75,99,0.15),transparent_45%),radial-gradient(circle_at_75%_70%,rgba(60,110,113,0.15),transparent_45%)]
+dark:bg-[radial-gradient(circle_at_25%_25%,rgba(40,75,99,0.30),transparent_45%),radial-gradient(circle_at_75%_70%,rgba(60,110,113,0.30),transparent_45%)]"
+/>
+
+        {/* 🟣 Floating Blobs */}
+   {/* Blob 1 */}
+<div className="pointer-events-none fixed 
+top-[-120px] left-[-150px]
+w-[420px] h-[420px]
+bg-primary/20 dark:bg-primary/30
+rounded-[40%]
+blur-[120px]
+animate-floatOne
+-z-10"
+/>
+
+{/* Blob 2 */}
+<div className="pointer-events-none fixed 
+top-[40%] right-[-180px]
+w-[500px] h-[500px]
+bg-accent/20 dark:bg-accent/30
+rounded-[50%]
+blur-[140px]
+animate-floatTwo
+-z-10"
+/>
+
+{/* Blob 3 */}
+<div className="pointer-events-none fixed 
+bottom-[-200px] left-[30%]
+w-[380px] h-[380px]
+bg-primary/15 dark:bg-primary/25
+rounded-[45%]
+blur-[130px]
+animate-floatThree
+-z-10"
+/>
+<div className="pointer-events-none fixed 
+top-[20%] left-[60%]
+w-[250px] h-[250px]
+bg-accent/10 dark:bg-accent/20
+rounded-full
+blur-[100px]
+animate-floatTwo
+-z-10"
+/>
+
+
+
+
+        {children}
       </body>
     </html>
   );
