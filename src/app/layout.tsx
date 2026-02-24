@@ -28,29 +28,31 @@ export default function RootLayout({
   return (
     <html lang="en">
      <body className="
-  relative overflow-x-hidden
-  bg-gradient-to-br 
-  from-lightBg 
-  to-[#F3F4F6] 
-  dark:from-darkBg 
+ relative overflow-x-hidden
+  bg-gradient-to-br
+  from-white
+  via-slate-100
+  to-slate-200
+  dark:from-darkBg
   dark:to-[#0F172A]
   text-lightText dark:text-darkText
+  transition-colors duration-500
 ">
        
         {/* 🌈 Background Gradient Layer */}
 <div className="pointer-events-none fixed inset-0 -z-20 
-bg-[radial-gradient(circle_at_25%_25%,rgba(40,75,99,0.15),transparent_45%),radial-gradient(circle_at_75%_70%,rgba(60,110,113,0.15),transparent_45%)]
-dark:bg-[radial-gradient(circle_at_25%_25%,rgba(40,75,99,0.30),transparent_45%),radial-gradient(circle_at_75%_70%,rgba(60,110,113,0.30),transparent_45%)]"
+bg-[radial-gradient(circle_at_25%_25%,rgba(40,75,99,0.15),transparent_45%),radial-gradient(circle_at_75%_70%,rgba(60,110,113,0.15),transparent_45%)]"
 />
 
         {/* 🟣 Floating Blobs */}
    {/* Blob 1 */}
 <div className="pointer-events-none fixed 
+will-change-transform
 top-[-120px] left-[-150px]
 w-[420px] h-[420px]
 bg-primary/20 dark:bg-primary/30
 rounded-[40%]
-blur-[120px]
+blur-[100px] dark:blur-[120px]
 animate-floatOne
 -z-10"
 />
@@ -58,10 +60,11 @@ animate-floatOne
 {/* Blob 2 */}
 <div className="pointer-events-none fixed 
 top-[40%] right-[-180px]
+will-change-transform
 w-[500px] h-[500px]
 bg-accent/20 dark:bg-accent/30
 rounded-[50%]
-blur-[140px]
+blur-[110px] dark:blur-[140px]
 animate-floatTwo
 -z-10"
 />
@@ -69,10 +72,11 @@ animate-floatTwo
 {/* Blob 3 */}
 <div className="pointer-events-none fixed 
 bottom-[-200px] left-[30%]
+will-change-transform
 w-[380px] h-[380px]
 bg-primary/15 dark:bg-primary/25
 rounded-[45%]
-blur-[130px]
+blur-[110px] dark:blur-[130px]
 animate-floatThree
 -z-10"
 />

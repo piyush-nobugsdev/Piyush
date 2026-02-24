@@ -1,16 +1,10 @@
+import { FiDownload } from "react-icons/fi"
 export default function About() {
   return (
     <section id="about" className="py-20 px-6 md:px-20">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         
-        {/* Photo */}
-        <div className="flex justify-center">
-          <img
-            src="/profile.jpg"
-            alt="Profile"
-            className="w-72 h-72 object-cover rounded-2xl shadow-lg"
-          />
-        </div>
+        
 
         {/* Text */}
         <div>
@@ -21,9 +15,18 @@ export default function About() {
             with modern web technologies and writing clean, efficient code.
           </p>
 
-          <button className="px-6 py-3 bg-black text-white rounded-xl hover:scale-105 transition">
-            Download Resume
-          </button>
+<a
+  href="/Piyush_resume_template.pdf"
+  
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2
+  px-6 py-3 bg-primary text-white rounded-lg
+  hover:bg-accent transition duration-300"
+>
+  <FiDownload size={18} />
+  Resume
+</a>
         </div>
 
       </div>
