@@ -19,7 +19,7 @@ export default function Hero() {
 
   {/* GitHub */}
   <a
-    href="https://github.com/YOUR_USERNAME"
+    href="https://github.com/piyush-nobugsdev"
     target="_blank"
     rel="noopener noreferrer"
     className="text-[#181717] dark:text-white
@@ -31,19 +31,20 @@ export default function Hero() {
 
   {/* LinkedIn */}
   <a
-    href="https://linkedin.com/in/YOUR_USERNAME"
+    href="https://www.linkedin.com/in/piyush-maurya-6095983b1"
     target="_blank"
     rel="noopener noreferrer"
     className="text-[#0A66C2]
     hover:-translate-y-1
     transition-transform duration-300"
   >
-    <FaLinkedin size={26} />
+    <FaLinkedin size={26} 
+    />
   </a>
 
   {/* LeetCode */}
   <a
-    href="https://leetcode.com/YOUR_USERNAME"
+    href="https://leetcode.com/u/LaH5jHYrIA/"
     target="_blank"
     rel="noopener noreferrer"
     className="text-[#FFA116]
