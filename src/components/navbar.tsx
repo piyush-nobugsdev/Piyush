@@ -20,7 +20,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <h1 className="text-xl font-bold bg-gradient-to-r from-white to-red-400 bg-clip-text text-transparent">
-            Piyush
+            Piyush Maurya
           </h1>
 
           {/* Desktop Links */}

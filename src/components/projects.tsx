@@ -13,14 +13,14 @@ const Projects: React.FC = () => {
       tagline: 'Cybersecurity Digital Twin Dashboard',
       summary:
         'A proof-of-concept IoT security platform that simulates an enterprise device fleet, modeling normal traffic behavior with a trained LSTM autoencoder.',
-      briefImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop',
+      briefImage: '/projects/aegis_auth.jpg',
       description:
         'A proof-of-concept IoT security platform that simulates an enterprise device fleet, modeling normal traffic behavior with a trained LSTM autoencoder and detecting anomalies in real-time using reconstruction error and statistical drift analysis.',
-      fullImages: [
-        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1516321318423-f06f70504c11?w=800&h=600&fit=crop',
-      ],
+     fullImages: [
+ '/projects/aegis_dashboard.jpg',
+ '/projects/aegis_devices.jpg',
+ '/projects/aegis_params.jpg',
+],
       tech: ['Python', 'PyTorch', 'Streamlit', 'Plotly', 'SQLite', 'ReportLab'],
       features: [
         'LSTM autoencoder for anomaly detection on 4 traffic features',
@@ -39,14 +39,14 @@ const Projects: React.FC = () => {
       tagline: 'Two-Sided Tutoring Marketplace',
       summary:
         'An MVP platform connecting parents and tutors in India. Parents post tutoring jobs; tutors pass qualification tests before applying.',
-      briefImage: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop',
+      briefImage: '/projects/tutor_landing.jpg',
       description:
         'An MVP platform connecting parents and tutors in India. Parents post tutoring jobs for their children; tutors must pass subject qualification tests before applying. Clean role-based auth and real-time dashboards keep both sides in sync.',
       fullImages: [
-        'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1552664730-d307ca884979?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=600&fit=crop',
-      ],
+ '/projects/tutor_dashboard.jpg',
+ '/projects/tutor_landing.jpg',
+ '/projects/parent_dashboard.jpg'
+],
       tech: ['Next.js 15', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
       features: [
         'Role-based OAuth (Google & GitHub) with forced account selection',
@@ -69,7 +69,7 @@ const Projects: React.FC = () => {
           {/* Section Header */}
           <div className="mb-8 sm:mb-12 animate-fade-in">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-3">
-              Featured <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">Projects</span>
+              My <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">Projects</span>
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-red-500 to-red-700 rounded-full"></div>
           </div>

@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/piyush-nobugsdev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border border-gray-600 hover:border-red-400 bg-gray-900/50 hover:bg-red-400/10 flex items-center justify-center transition duration-300"
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/piyush-maurya-6095983b1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border border-gray-600 hover:border-red-400 bg-gray-900/50 hover:bg-red-400/10 flex items-center justify-center transition duration-300"
@@ -74,26 +74,42 @@ const Hero: React.FC = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex items-center gap-4 pt-4">
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-full transition duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2"
-              >
-                <span>LET&apos;S COLLABORATE</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-              </button>
-             <a
-  href="/resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="px-8 py-3 border border-gray-600 hover:border-red-400 text-white font-bold rounded-full transition duration-300 hover:bg-red-400/10 flex items-center gap-2"
->
-  <span>GET RESUME</span>
-  <ExternalLink size={16} />
-</a>
-            </div>
+            {/* CTA Buttons */}
+<div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-4 w-full">
+
+  {/* Collaborate Button */}
+  <button
+    onClick={() => scrollToSection('contact')}
+    className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-full transition duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 text-sm sm:text-base"
+  >
+    <span>LET&apos;S COLLABORATE</span>
+    <svg
+      className="w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+      />
+    </svg>
+  </button>
+
+  {/* Resume Button */}
+  <a
+    href="/piyush_resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full sm:w-auto px-6 sm:px-8 py-3 border border-gray-600 hover:border-red-400 text-white font-bold rounded-full transition duration-300 hover:bg-red-400/10 flex items-center justify-center gap-2 text-sm sm:text-base"
+  >
+    <span>GET RESUME</span>
+    <ExternalLink size={16} />
+  </a>
+
+</div>
           </div>
 
           {/* Right Content - Code Window */}

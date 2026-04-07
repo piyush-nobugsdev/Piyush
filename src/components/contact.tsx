@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { User, Mail, MessageSquare, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,12 @@ const Contact: React.FC = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  // Initialize Email.js (do this once when component mounts)
+  React.useEffect(() => {
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '');
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -19,28 +26,47 @@ const Contact: React.FC = () => {
       ...prev,
       [name]: value
     }));
+    setSubmitError(''); // Clear error when user types
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setSubmitError('');
+
+    try {
+      // Send email using Email.js
+      await emailjs.send(
+  process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+  process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+  {
+    name: formData.name,
+    email: formData.email,
+    message: formData.message,
+    title: "Portfolio Contact"
+  },
+  process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+);
+
       setSubmitSuccess(true);
       setFormData({ name: '', email: '', message: '' });
-      
+
       // Reset success message after 3 seconds
       setTimeout(() => setSubmitSuccess(false), 3000);
-    }, 1500);
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setSubmitError('Failed to send message. Please try again.');
+      setTimeout(() => setSubmitError(''), 3000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <section
-  id="contact"
-  className="bg-gradient-to-br from-[#1a0a0a] via-[#3d1818] to-[#1a0a0a] text-white py-12 sm:py-16 lg:py-20 px-6 sm:px-8 lg:px-12 relative overflow-hidden"
->
+      id="contact"
+      className="bg-gradient-to-br from-[#1a0a0a] via-[#3d1818] to-[#1a0a0a] text-white py-12 sm:py-16 lg:py-20 px-6 sm:px-8 lg:px-12 relative overflow-hidden"
+    >
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-red-900/10 rounded-full blur-3xl"></div>
@@ -56,7 +82,7 @@ const Contact: React.FC = () => {
         <div className="animate-fade-in">
           
           {/* Heading */}
-         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
             Send a Message
           </h2>
 
@@ -126,8 +152,15 @@ const Contact: React.FC = () => {
 
             {/* Success Message */}
             {submitSuccess && (
-              <div className="p-3 bg-red-600/20 border border-red-600/50 rounded-lg text-red-400 text-center font-semibold text-sm animate-pulse">
-                ✓ Message sent successfully! I&apos;ll be in touch soon.
+              <div className="p-3 bg-red-600/20 border border-red-600/50 rounded-lg text-red-400 text-center font-semibold text-sm ">
+                ✓ Message sent successfully!
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitError && (
+              <div className="p-3 bg-red-600/20 border border-red-600/50 rounded-lg text-red-400 text-center font-semibold text-sm">
+                ✗ {submitError}
               </div>
             )}
           </form>
@@ -139,7 +172,7 @@ const Contact: React.FC = () => {
             </p>
             <div className="flex gap-2 sm:gap-3 flex-wrap">
               <a
-                href="https://github.com"
+                href="https://github.com/piyush-nobugsdev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 sm:px-5 py-2 bg-gray-900/50 hover:bg-gray-800 border border-gray-600 hover:border-red-500 text-white font-semibold text-sm rounded transition duration-300"
@@ -147,19 +180,21 @@ const Contact: React.FC = () => {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/piyush-maurya-6095983b1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 sm:px-5 py-2 bg-gray-900/50 hover:bg-gray-800 border border-gray-600 hover:border-red-500 text-white font-semibold text-sm rounded transition duration-300"
               >
                 LinkedIn
               </a>
-              <a
-                href="mailto:your-email@example.com"
-                className="px-4 sm:px-5 py-2 bg-gray-900/50 hover:bg-gray-800 border border-gray-600 hover:border-red-500 text-white font-semibold text-sm rounded transition duration-300"
-              >
-                Email
-              </a>
+            <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=piyush.official.dev@gmail.com&su=Portfolio%20Inquiry"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-4 sm:px-5 py-2 bg-gray-900/50 hover:bg-gray-800 border border-gray-600 hover:border-red-500 text-white font-semibold text-sm rounded transition duration-300"
+>
+  Email
+</a>
             </div>
           </div>
         </div>

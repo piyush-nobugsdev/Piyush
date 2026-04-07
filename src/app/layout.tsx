@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Piyush - Full Stack Engineer",
+  title: "Piyush Maurya",
   description: "Portfolio showcasing full-stack development projects, skills, and experience in building high-performance web applications.",
 };
 
