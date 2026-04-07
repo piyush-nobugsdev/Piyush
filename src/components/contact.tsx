@@ -37,17 +37,17 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section 
-      id="contact" 
-      className="bg-gradient-to-br from-[#1a0a0a] via-[#3d1818] to-[#1a0a0a] text-white py-12 sm:py-14 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
-    >
+    <section
+  id="contact"
+  className="mt-[80px] bg-gradient-to-br from-[#1a0a0a] via-[#3d1818] to-[#1a0a0a] text-white py-8 sm:py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden scroll-mt-24 "
+>
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-red-900/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/3 left-1/3 w-80 h-80 bg-red-800/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-2xl mx-auto relative z-10">
+      <div className="max-w-xl mx-auto relative z-10">
         
         {/* Left red accent bar */}
         <div className="absolute -left-4 sm:-left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-red-600 to-transparent opacity-0 sm:opacity-100"></div>
@@ -56,14 +56,9 @@ const Contact: React.FC = () => {
         <div className="animate-fade-in">
           
           {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-2">
+         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
             Send a Message
           </h2>
-
-          {/* Subheading */}
-          <p className="text-sm sm:text-base text-gray-300 mb-6 sm:mb-8">
-            I'll get back to you within 24 hours.
-          </p>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
