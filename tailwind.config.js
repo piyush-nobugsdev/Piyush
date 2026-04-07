@@ -8,16 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#284B63",
-        accent: "#3C6E71",
-
-        lightBg: "#FFFFFF",
-        lightText: "#353535",
-        lightCard: "#D9D9D9",
-
-        darkBg: "#111827",
-        darkCard: "#1F2937",
-        darkText: "#F9FAFB",
+        // 4 Color Palette
+        darkBg: "#181823",      // Deep maroon/dark background
+        accent: "#E74C3C",      // Bright red/coral accent
+        lightBg: "#C0EEF2",     // Light cyan (secondary accent)
+        lightText: "#E9F8F9",   // Off-white text
+        
+        // Additional utilities
+        mutedText: "#A0A0A0",   // For secondary text
+      },
+      backgroundImage: {
+        'gradient-dark': 'linear-gradient(135deg, #181823 0%, #2a1f2e 100%)',
       },
     },
   },

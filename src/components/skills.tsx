@@ -1,97 +1,116 @@
+'use client';
+
+import React from "react";
 import {
+  SiJavascript,
+  SiReact,
   SiNextdotjs,
   SiTailwindcss,
-  SiFramer,
-  SiNodedotjs,
+  SiPostgresql,
   SiExpress,
-  SiSupabase,
+  SiNodedotjs,
+  SiPython,
+  SiCplusplus,
   SiGit,
   SiGithub,
   SiVercel,
-  SiCplusplus
-} from "react-icons/si"
-type Skill = {
-  name: string
-  icon: any
-  color?: string
-  monochrome?: boolean
-}
-const skills: Record<string, Skill[]> = {
-  frontend: [
-    { name: "Next.js", icon: SiNextdotjs, monochrome: true },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-    { name: "Framer Motion", icon: SiFramer, color: "#0055FF" }
-  ],
-  backend: [
-    { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-    { name: "Express.js", icon: SiExpress, monochrome: true }
-  ],
-  database: [
-    { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" }
-  ],
-  tools: [
-    { name: "Git", icon: SiGit, color: "#F05032" },
-    { name: "GitHub", icon: SiGithub, monochrome: true },
-    { name: "Vercel", icon: SiVercel, monochrome: true }
-  ],
-  programming: [
-    { name: "C++", icon: SiCplusplus, color: "#00599C" }
-  ]
-}
+  SiSupabase
+} from "react-icons/si";
 
-export default function Skills() {
+const skillCategories = [
+  {
+    title: "LANGUAGES",
+    skills: [
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "Python", icon: SiPython },
+      { name: "C++", icon: SiCplusplus }
+    ]
+  },
+  {
+    title: "FRONTEND",
+    skills: [
+      { name: "React", icon: SiReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Tailwind", icon: SiTailwindcss }
+    ]
+  },
+  {
+    title: "BACKEND",
+    skills: [
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Express", icon: SiExpress },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Supabase", icon: SiSupabase }
+    ]
+  },
+  {
+    title: "DEVOPS & TOOLS",
+    skills: [
+      { name: "Git", icon: SiGit },
+      { name: "GitHub", icon: SiGithub },
+      { name: "Vercel", icon: SiVercel }
+    ]
+  }
+];
+
+const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="py-24 px-6 md:px-20 transition-colors duration-300"
+      className="bg-black text-white px-6 sm:px-8 lg:px-12 py-12 sm:py-16 lg:py-20"
     >
-      <h2 className="text-3xl font-bold text-center mb-16 text-lightText dark:text-darkText">
-        Skills
-      </h2>
+      <div className="max-w-7xl mx-auto w-full">
 
-      <div className="grid md:grid-cols-2 gap-12">
-        {Object.entries(skills).map(([category, items]) => (
-          <div
-            key={category}
-            className="p-6 rounded-2xl border border-lightCard dark:border-darkCard
-            transition-all duration-300 hover:-translate-y-1"
-          >
-            <h3 className="text-lg font-semibold mb-8 tracking-wide uppercase text-primary">
-              {category}
-            </h3>
+        {/* Heading */}
+        <div className="mb-6 sm:mb-8">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-3">
+            TECHNOLOGIES & SKILLS
+          </h2>
 
-            <div className="grid grid-cols-2 gap-6">
-             {items.map((skill) => {
-  const Icon = skill.icon
+          <div className="h-1 bg-gradient-to-r from-red-600 to-transparent w-56 sm:w-64 rounded-full"></div>
+        </div>
 
-  return (
-    <div
-      key={skill.name}
-      className="flex items-center gap-3
-      opacity-80 hover:opacity-100
-      transition-all duration-300"
-    >
-      <div
-        className={`text-2xl ${
-          skill.monochrome
-            ? "text-black dark:text-white"
-            : ""
-        }`}
-        style={!skill.monochrome ? { color: skill.color } : {}}
-      >
-        <Icon />
-      </div>
+        {/* Skill Categories */}
+        <div className="space-y-6">
+          {skillCategories.map((category, i) => (
+            <div key={i}>
 
-      <span className="text-sm text-lightText dark:text-darkText">
-        {skill.name}
-      </span>
-    </div>
-  )
-})}
+              {/* Category Title */}
+              <div className="flex items-center gap-4 mb-4">
+                <h3 className="text-lg sm:text-xl font-bold tracking-wider whitespace-nowrap">
+                  {category.title}
+                </h3>
+                <div className="flex-1 h-[2px] bg-gradient-to-r from-red-600 to-transparent"></div>
+              </div>
+
+              {/* Skills Grid */}
+              <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-2">
+
+                {category.skills.map((skill, index) => {
+                  const Icon = skill.icon;
+
+                  return (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center gap-1 p-2 rounded-md bg-gray-900 hover:bg-gray-800 transition duration-300 transform hover:scale-105"
+                    >
+                      <Icon className="text-xl text-red-500" />
+
+                      <p className="text-[11px] sm:text-xs font-semibold text-gray-300 text-center">
+                        {skill.name}
+                      </p>
+                    </div>
+                  );
+                })}
+
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default Skills;
