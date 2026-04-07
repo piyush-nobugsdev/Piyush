@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
   return (
     <section
   id="contact"
-  className="mt-[80px] bg-gradient-to-br from-[#1a0a0a] via-[#3d1818] to-[#1a0a0a] text-white py-8 sm:py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden scroll-mt-24 "
+  className="bg-gradient-to-br from-[#1a0a0a] via-[#3d1818] to-[#1a0a0a] text-white py-12 sm:py-16 lg:py-20 px-6 sm:px-8 lg:px-12 relative overflow-hidden"
 >
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
         <div className="animate-fade-in">
           
           {/* Heading */}
-         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
             Send a Message
           </h2>
 
@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full px-6 sm:px-8 py-2.5 sm:py-3 mt-2 bg-red-600 hover:bg-red-700 border border-red-600 hover:border-red-500 text-white font-bold text-sm sm:text-base rounded-lg transition duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
+              className="w-full px-6 sm:px-8 py-3 mt-2 bg-red-600 hover:bg-red-700 border border-red-600 hover:border-red-500 text-white font-bold text-sm sm:text-base rounded-lg transition duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
             >
               <span>{isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}</span>
               <Send size={16} className="group-hover:translate-x-0.5 transition duration-300" />
@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
             {/* Success Message */}
             {submitSuccess && (
               <div className="p-3 bg-red-600/20 border border-red-600/50 rounded-lg text-red-400 text-center font-semibold text-sm animate-pulse">
-                ✓ Message sent successfully! I'll be in touch soon.
+                ✓ Message sent successfully! I&apos;ll be in touch soon.
               </div>
             )}
           </form>
@@ -142,7 +142,7 @@ const Contact: React.FC = () => {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 sm:px-5 py-2 bg-gray-900/50 hover:bg-gray-800 border border-gray-600 hover:border-red-500 text-white font-semibold text-xs sm:text-sm rounded transition duration-300"
+                className="px-4 sm:px-5 py-2 bg-gray-900/50 hover:bg-gray-800 border border-gray-600 hover:border-red-500 text-white font-semibold text-sm rounded transition duration-300"
               >
                 GitHub
               </a>
@@ -150,13 +150,13 @@ const Contact: React.FC = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 sm:px-5 py-2 bg-gray-900/50 hover:bg-gray-800 border border-gray-600 hover:border-red-500 text-white font-semibold text-xs sm:text-sm rounded transition duration-300"
+                className="px-4 sm:px-5 py-2 bg-gray-900/50 hover:bg-gray-800 border border-gray-600 hover:border-red-500 text-white font-semibold text-sm rounded transition duration-300"
               >
                 LinkedIn
               </a>
               <a
                 href="mailto:your-email@example.com"
-                className="px-4 sm:px-5 py-2 bg-gray-900/50 hover:bg-gray-800 border border-gray-600 hover:border-red-500 text-white font-semibold text-xs sm:text-sm rounded transition duration-300"
+                className="px-4 sm:px-5 py-2 bg-gray-900/50 hover:bg-gray-800 border border-gray-600 hover:border-red-500 text-white font-semibold text-sm rounded transition duration-300"
               >
                 Email
               </a>

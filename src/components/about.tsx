@@ -6,13 +6,13 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="min-h-screen bg-black text-white py-20 px-6 sm:px-8 lg:px-12"
+      className="bg-black text-white py-12 sm:py-16 lg:py-20 px-6 sm:px-8 lg:px-12 "
     >
       <div className="max-w-7xl mx-auto">
 
         {/* SECTION HEADER */}
-        <div className="mb-16 sm:mb-20 lg:mb-24 animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4">
+        <div className="mb-8 sm:mb-12 animate-fade-in">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-3">
             About{" "}
             <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
               Me
@@ -58,7 +58,7 @@ const About: React.FC = () => {
       {/* INTRO TEXT */}
       <div className="space-y-5">
         <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-          Hi! I'm{" "}
+          Hi! I&apos;m{" "}
           <span className="font-bold text-white">Piyush Maurya</span>, a passionate
           developer who enjoys building modern, scalable web applications. I love
           turning ideas into real products that solve meaningful problems and deliver

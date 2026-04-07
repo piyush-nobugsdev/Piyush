@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Github, Linkedin, X, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, ExternalLink } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const scrollToSection = (id: string) => {
@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   return (
     <section 
       id="hero"
-      className="min-h-screen bg-gradient-to-br from-[#1a0a0a] via-[#2d1010] to-[#1a0a0a] text-white relative overflow-hidden"
+      className="h-screen bg-gradient-to-br from-[#1a0a0a] via-[#2d1010] to-[#1a0a0a] text-white relative overflow-hidden pt-16 md:pt-20"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
       
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 h-screen flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 h-[calc(100%-64px)] md:h-[calc(100%-80px)] flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           
           {/* Left Content */}
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           {/* Main Heading */}
 <div className="space-y-4">
   <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight">
-    Hi, I'm{' '}
+    Hi, I&apos;m{' '}
     <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
       Piyush
     </span>
@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
                 onClick={() => scrollToSection('contact')}
                 className="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-full transition duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2"
               >
-                <span>LET'S COLLABORATE</span>
+                <span>LET&apos;S COLLABORATE</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>
@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
       <span className="ml-8">
         <span className="text-white">name</span>
         <span className="text-white">: </span>
-        <span className="text-green-400">'Piyush Maurya'</span>
+        <span className="text-green-400">&apos;Piyush Maurya&apos;</span>
         <span className="text-white">,</span>
       </span>
     </div>
@@ -138,7 +138,7 @@ const Hero: React.FC = () => {
       <span className="ml-8">
         <span className="text-white">role</span>
         <span className="text-white">: </span>
-        <span className="text-green-400">'Curious Engineer'</span>
+        <span className="text-green-400">&apos;Curious Engineer&apos;</span>
         <span className="text-white">,</span>
       </span>
     </div>
@@ -148,7 +148,7 @@ const Hero: React.FC = () => {
       <span className="ml-8">
         <span className="text-white">focus</span>
         <span className="text-white">: </span>
-        <span className="text-green-400">'Web • DevOps • Security'</span>
+        <span className="text-green-400">&apos;Web • DevOps • Security&apos;</span>
         <span className="text-white">,</span>
       </span>
     </div>
@@ -159,11 +159,11 @@ const Hero: React.FC = () => {
         <span className="text-white">stack</span>
         <span className="text-white">: </span>
         <span className="text-yellow-400">[</span>
-        <span className="text-green-400">'Next.js'</span>
+        <span className="text-green-400">&apos;Next.js&apos;</span>
         <span className="text-white">, </span>
-        <span className="text-green-400">'Tailwind'</span>
+        <span className="text-green-400">&apos;Tailwind&apos;</span>
         <span className="text-white">, </span>
-        <span className="text-green-400">'Express'</span>
+        <span className="text-green-400">&apos;Express&apos;</span>
         <span className="text-yellow-400">]</span>
         <span className="text-white">, </span>
        
@@ -176,7 +176,7 @@ const Hero: React.FC = () => {
       <span className="ml-8">
         <span className="text-white">motto</span>
         <span className="text-white">: </span>
-        <span className="text-green-400">'Build. Secure. Scale.'</span>
+        <span className="text-green-400">&apos;Build. Secure. Scale.&apos;</span>
         
       </span>
     </div>

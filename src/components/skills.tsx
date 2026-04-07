@@ -57,13 +57,13 @@ const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="h-[calc(100vh-80px)] max-h-[900px] bg-black text-white px-12 py-1 flex items-start scroll-mt-24"
+      className="bg-black text-white px-6 sm:px-8 lg:px-12 py-12 sm:py-16 lg:py-20"
     >
       <div className="max-w-7xl mx-auto w-full">
 
         {/* Heading */}
-        <div className="mb-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3">
+        <div className="mb-6 sm:mb-8">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-3">
             TECHNOLOGIES & SKILLS
           </h2>
 

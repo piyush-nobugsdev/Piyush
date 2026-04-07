@@ -63,12 +63,12 @@ const Projects: React.FC = () => {
 
   return (
     <>
-      <section id="projects" className="bg-black text-white py-12 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8">
+      <section id="projects" className="bg-black text-white py-12 sm:py-16 lg:py-20 px-6 sm:px-8 lg:px-12 ">
         <div className="max-w-6xl mx-auto">
           
           {/* Section Header */}
-          <div className="mb-10 sm:mb-12 animate-fade-in">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3">
+          <div className="mb-8 sm:mb-12 animate-fade-in">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-3">
               Featured <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">Projects</span>
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-red-500 to-red-700 rounded-full"></div>
